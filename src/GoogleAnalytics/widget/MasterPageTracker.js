@@ -93,7 +93,7 @@ define("GoogleAnalytics/widget/MasterPageTracker", [
             var path = oriPath.substr(0, oriPath.length - pageExtension.length);
             if (typeof this.prefix !== "undefined" && this.prefix !== "") {
                 this._replaceTags(this.prefix, lang.hitch(this, function(text) {
-                    path = this.prefix + "/" + path; 
+                    path = text + "/" + path; 
                     ga("send", {
                         "hitType": "pageview",
                         "page": path,
